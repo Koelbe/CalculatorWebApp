@@ -1,0 +1,29 @@
+<h1>Addition Calculator Web App</h1>
+<div style="display: flex; flex-direction: row; justify-content: left;align-items: center;">
+<h3>Number 1: </h3>
+<input type = "text" id = "FirstTextInputBox" name="textBox1Name">
+</div>
+
+<div style="display: flex; flex-direction: row; justify-content: left; align-items: center;">
+<h3>Number 2: </h3>
+<input type="text" id = "SecondTextInputBox">
+</div>
+
+<input type="button" id = "AddNumberButton" value="Add Numbers" onclick="AddTheTwoInputBoxNumbers();">
+<div style="display: flex; flex-direction: row; align-content: center; justify-content: left;">
+    <h2>Answer: </h2>
+    <h2 id="AnswerLabel">0</h2>
+</div>
+
+
+
+<script>
+
+function AddTheTwoInputBoxNumbers()
+{
+    var Num1 = document.getElementById("FirstTextInputBox").value;
+    var Num2 = document.getElementById("SecondTextInputBox").value;
+    document.getElementById("AnswerLabel").innerHTML = (parseFloat(Num1)+parseFloat(Num2)).toString();
+}
+
+</script>
